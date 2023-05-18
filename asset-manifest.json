@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ada-voucher-2023/static/css/main.0fd6675c.css",
-    "main.js": "/ada-voucher-2023/static/js/main.5a5e55d0.js",
+    "main.js": "/ada-voucher-2023/static/js/main.f24015f0.js",
     "static/js/845.dab2b678.chunk.js": "/ada-voucher-2023/static/js/845.dab2b678.chunk.js",
     "static/js/787.3e3e9803.chunk.js": "/ada-voucher-2023/static/js/787.3e3e9803.chunk.js",
     "static/media/big_bunda_time.mp3": "/ada-voucher-2023/static/media/big_bunda_time.4334d235cc1114822fad.mp3",
@@ -10,12 +10,12 @@
     "static/media/tylko_ada.mp3": "/ada-voucher-2023/static/media/tylko_ada.30ab8c80e3a2493cd3bb.mp3",
     "index.html": "/ada-voucher-2023/index.html",
     "main.0fd6675c.css.map": "/ada-voucher-2023/static/css/main.0fd6675c.css.map",
-    "main.5a5e55d0.js.map": "/ada-voucher-2023/static/js/main.5a5e55d0.js.map",
+    "main.f24015f0.js.map": "/ada-voucher-2023/static/js/main.f24015f0.js.map",
     "845.dab2b678.chunk.js.map": "/ada-voucher-2023/static/js/845.dab2b678.chunk.js.map",
     "787.3e3e9803.chunk.js.map": "/ada-voucher-2023/static/js/787.3e3e9803.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0fd6675c.css",
-    "static/js/main.5a5e55d0.js"
+    "static/js/main.f24015f0.js"
   ]
 }
