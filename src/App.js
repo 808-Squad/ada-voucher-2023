@@ -44,7 +44,7 @@ function App() {
   return (
     <CenterContainer>
       {current === 0 && (
-        <img src='/ryje/1.png' width={200} className='image-pulse' onClick={() => { setCurrent(1); playMainSong(); }} />
+        <img src={process.env.PUBLIC_URL + '/ryje/1.png'} width={200} className='image-pulse' onClick={() => { setCurrent(1); playMainSong(); }} />
       )}
       {current === 1 && (
         <>
@@ -88,12 +88,12 @@ function App() {
       {current === 8 && (
         <FlexContainer>
           <FlexRow>
-            <img src='/ryje/2.jpeg' height={300} className='image-pulse' />
-            <img src='/ryje/3.jpeg' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/2.jpeg'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/3.jpeg'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <img src='/ryje/4.jpeg' height={300} className='image-pulse' />
-            <img src='/ryje/5.jpeg' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/4.jpeg'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/5.jpeg'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
             <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(9)}>giv mi mor</button>
@@ -103,12 +103,12 @@ function App() {
       {current === 9 && (
         <FlexContainer>
           <FlexRow>
-            <img src='/ryje/6.jpeg' height={300} className='image-pulse' />
-            <img src='/ryje/7.jpeg' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/6.jpeg'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/7.jpeg'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <img src='/ryje/8.png' height={300} className='image-pulse' />
-            <img src='/ryje/9.png' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/8.png'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/9.png'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
             <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(10)}>just like that baby</button>
@@ -118,11 +118,12 @@ function App() {
       {current === 10 && (
         <FlexContainer>
           <FlexRow>
-            <img src='/ryje/10.png' height={300} className='image-pulse' />
-            <img src='/ryje/11.png' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/10.png'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/11.png'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <img src='/ryje/12.png' height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/12.png'} height={300} className='image-pulse' />
+            <img src={process.env.PUBLIC_URL + '/ryje/13.png'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
             <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(11)}>ok i've had enough</button>
