@@ -48,8 +48,8 @@ function App() {
       )}
       {current === 1 && (
         <>
-          <p className='text-very-slow-appear' onClick={() => { setCurrent(2); playYouSoSpecial() }}>Ada</p>
-          <p className='text-very-very-slow-appear'>u hav tu click</p>
+          <p className='text-1-minute' onClick={() => { setCurrent(2); playYouSoSpecial() }}>Ada</p>
+          <p className='text-1-minute'>u hav tu click</p>
         </>
       )}
       {current === 2 && (

@@ -53,6 +53,17 @@ code {
   animation-fill-mode: forwards;
 }
 
+.text-1-minute {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 12px;
+  animation-name: fadein;
+  animation-duration: 12s;
+  animation-delay: 60s;
+  cursor: pointer;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
 .text-fadein-pulse {
   animation: pulse 1s linear infinite;
   animation-name: fadein 5s;
