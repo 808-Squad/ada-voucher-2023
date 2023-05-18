@@ -1,6 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 import styled from 'styled-components';
+import useSound from 'use-sound';
+import mainSong from './mp3/big_bunda_time.mp3';
+import youSoSpecial from './mp3/ada_you_so_special.mp3';
+import tylkoAda from './mp3/tylko_ada.mp3';
+import loop from './mp3/loop.mp3';
 
 const CenterContainer = styled.div`
   display: flex;
@@ -30,13 +35,22 @@ function App() {
   const [timestamp, setTimestamp] = useState(null)
   const [regulaminAccepted, setRegulaminAccepted] = useState(false);
 
+  const [playMainSong, mainSongExposedData] = useSound(mainSong, { loop: true })
+  const [playYouSoSpecial] = useSound(youSoSpecial)
+  const [playTylkoAda] = useSound(tylkoAda)
+  const [playLoop, playLoopExposedData] = useSound(loop, { loop: true, playbackRate: 1.25 });
+  const [playLoopSlow] = useSound(loop, { loop: true, playbackRate: 0.7 });
+
   return (
     <CenterContainer>
       {current === 0 && (
-        <img src='/ryje/1.png' width={200} className='image-pulse' onClick={() => setCurrent(1)} />
+        <img src='/ryje/1.png' width={200} className='image-pulse' onClick={() => { setCurrent(1); playMainSong(); }} />
       )}
       {current === 1 && (
-        <p className='text-slow-appear' onClick={() => setCurrent(2)}>Ada</p>
+        <>
+          <p className='text-very-slow-appear' onClick={() => { setCurrent(2); playYouSoSpecial() }}>Ada</p>
+          <p className='text-very-very-slow-appear'>u hav tu click</p>
+        </>
       )}
       {current === 2 && (
         <p className='text-very-slow-appear' onClick={() => setCurrent(3)}>gurl</p>
@@ -49,7 +63,7 @@ function App() {
       )}
       {current === 4 && (
         <FlexContainer>
-          <p className='text-pulse' onClick={() => setCurrent(5)}>oł jeah</p>
+          <p className='text-pulse' onClick={() => { setCurrent(5); playTylkoAda(); }}>oł jeah</p>
         </FlexContainer>
       )}
       {current === 5 && (
@@ -104,12 +118,11 @@ function App() {
       {current === 10 && (
         <FlexContainer>
           <FlexRow>
-            <img src='/ryje/6.jpeg' height={300} className='image-pulse' />
-            <img src='/ryje/7.jpeg' height={300} className='image-pulse' />
+            <img src='/ryje/10.png' height={300} className='image-pulse' />
+            <img src='/ryje/11.png' height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <img src='/ryje/8.png' height={300} className='image-pulse' />
-            <img src='/ryje/9.png' height={300} className='image-pulse' />
+            <img src='/ryje/12.png' height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
             <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(11)}>ok i've had enough</button>
@@ -121,7 +134,7 @@ function App() {
           <p className='text-slow-appear'>now it gives me the humungous pleasure to present to you</p>
           <p className='text-slow-appear'><strong>the wąszer</strong></p>
           <FlexRow>
-            <button className='button-no-delay' style={{ cursor: 'pointer' }} onClick={() => setCurrent(12)}>ok mę</button>
+            <button className='button-no-delay' style={{ cursor: 'pointer' }} onClick={() => { setCurrent(12); mainSongExposedData.stop(); playLoop(); }}>ok mę</button>
           </FlexRow>
         </FlexContainer>
       )}
@@ -159,13 +172,13 @@ function App() {
             <input type="checkbox" className='button-simple' id="regulamin" onChange={() => setRegulaminAccepted(!regulaminAccepted)} />
             <label for="regulamin">click here to accept the regulamin wąszera</label>
           </p>
-          <button className='button-simple' disabled={!regulaminAccepted}  style={{ cursor: 'pointer' }} onClick={() => setCurrent(13)}>{regulaminAccepted ? 'now ur redi' : 'accept the regulamin'}</button>
+          <button className='button-simple' disabled={!regulaminAccepted} style={{ cursor: 'pointer' }} onClick={() => { setCurrent(13); playLoopExposedData.stop(); playLoopSlow() }}>{regulaminAccepted ? 'now ur redi' : 'accept the regulamin'}</button>
         </FlexContainer>
       )}
       {current === 13 && (
         <FlexContainer>
           <p className='text-fadein-pulse'>you receive</p>
-          <p className='text-fadein-pulse'><strong>$MONEY</strong></p>
+          <p className='text-fadein-pulse'><strong>611,85 pelenów</strong></p>
           <p className='text-fadein-pulse'>congratulations baby dałaś radę</p>
           <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(0)}>start again</button>
         </FlexContainer>
