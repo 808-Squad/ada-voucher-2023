@@ -75,14 +75,14 @@ function App() {
       {current === 6 && (
         <FlexContainer>
           <p className='text-fadein-pulse'>it's a wąszer</p>
-          <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(7)}>OŁ EM DŻI</button>
+          <button className='button' onClick={() => setCurrent(7)}>OŁ EM DŻI</button>
         </FlexContainer>
       )}
       {current === 7 && (
         <FlexContainer>
           <p className='text-fadein-pulse'>now before we proceed</p>
           <p className='text-fadein-pulse'>please enjoy this fine selection of ryje</p>
-          <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(8)}>brigidą</button>
+          <button className='button' onClick={() => setCurrent(8)}>brigidą</button>
         </FlexContainer>
       )}
       {current === 8 && (
@@ -96,7 +96,7 @@ function App() {
             <img src={process.env.PUBLIC_URL + '/ryje/5.jpeg'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(9)}>giv mi mor</button>
+            <button className='button'  onClick={() => setCurrent(9)}>giv mi mor</button>
           </FlexRow>
         </FlexContainer>
       )}
@@ -111,7 +111,7 @@ function App() {
             <img src={process.env.PUBLIC_URL + '/ryje/9.png'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(10)}>just like that baby</button>
+            <button className='button' onClick={() => setCurrent(10)}>just like that baby</button>
           </FlexRow>
         </FlexContainer>
       )}
@@ -126,7 +126,7 @@ function App() {
             <img src={process.env.PUBLIC_URL + '/ryje/13.png'} height={300} className='image-pulse' />
           </FlexRow>
           <FlexRow>
-            <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(11)}>ok i've had enough</button>
+            <button className='button' onClick={() => setCurrent(11)}>ok i've had enough</button>
           </FlexRow>
         </FlexContainer>
       )}
@@ -135,7 +135,7 @@ function App() {
           <p className='text-slow-appear'>now it gives me the humungous pleasure to present to you</p>
           <p className='text-slow-appear'><strong>the wąszer</strong></p>
           <FlexRow>
-            <button className='button-no-delay' style={{ cursor: 'pointer' }} onClick={() => { setCurrent(12); mainSongExposedData.stop(); playLoop(); }}>ok mę</button>
+            <button className='button-no-delay' onClick={() => { setCurrent(12); mainSongExposedData.stop(); playLoop(); }}>ok mę</button>
           </FlexRow>
         </FlexContainer>
       )}
@@ -173,7 +173,7 @@ function App() {
             <input type="checkbox" className='button-simple' id="regulamin" onChange={() => setRegulaminAccepted(!regulaminAccepted)} />
             <label for="regulamin">click here to accept the regulamin wąszera</label>
           </p>
-          <button className='button-simple' disabled={!regulaminAccepted} style={{ cursor: 'pointer' }} onClick={() => { setCurrent(13); playLoopExposedData.stop(); playLoopSlow() }}>{regulaminAccepted ? 'now ur redi' : 'accept the regulamin'}</button>
+          <button className='button-simple' disabled={!regulaminAccepted}  onClick={() => { setCurrent(13); playLoopExposedData.stop(); playLoopSlow() }}>{regulaminAccepted ? 'now ur redi' : 'accept the regulamin'}</button>
         </FlexContainer>
       )}
       {current === 13 && (
@@ -181,7 +181,7 @@ function App() {
           <p className='text-fadein-pulse'>you receive</p>
           <p className='text-fadein-pulse'><strong>611,85 pelenów</strong></p>
           <p className='text-fadein-pulse'>congratulations baby dałaś radę</p>
-          <button className='button' style={{ cursor: 'pointer' }} onClick={() => setCurrent(0)}>start again</button>
+          <button className='button' onClick={() => setCurrent(0)}>start again</button>
         </FlexContainer>
       )}
     </CenterContainer>
